@@ -1,0 +1,28 @@
+// comments like this are ok
+#  or this
+/*
+    or this
+*/
+or this
+
+Simply put: the only payload sourced from this sort of files
+comes from any line where the following regex matches
+    ^\d+,([ACI]:\d+){1,}
+Each line is first stripped of its white spaces.
+
+So for example the follwing is fine
+1111, A:1 , C:2,A:2,I:7,A:2,A:4,A:1
+
+the following too, (spaces are removed)
+      2222, A:1 , C:2,A:2,I:5,A:2,A:3,A:1
+
+or this (extra content allowed)
+3333, A:1 , C:2,A:2,I:6,some rubbish in the middle, A:2,A:0,A:1
+
+or this (comment-like text)
+4444, A:1 , C:2,A:2,I:8, A:2,A:6,A:1  // some notes here
+
+
+7777, A:1 , C:2,A:2,I:5,A:2,A:6,A:1
+8888, A:1 , C:2,A:1,I:58,A:2,A:1,A:5,C:3
+99,A:3,A:2,A:2,I:8,C:2

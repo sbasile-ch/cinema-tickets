@@ -1,10 +1,10 @@
 /**
  * Immutable Object.
  */
+import Ticket from './Ticket.js';
 
 export default class TicketTypeRequest {
   #type;
-
   #noOfTickets;
 
   constructor(type, noOfTickets) {
@@ -24,9 +24,16 @@ export default class TicketTypeRequest {
     return this.#noOfTickets;
   }
 
+  setNoOfTickets(noOfTickets) {
+    if (!Number.isInteger(noOfTickets)) {
+      throw new TypeError('noOfTickets must be an integer');
+    }
+    this.#noOfTickets = noOfTickets;
+  }
+
   getTicketType() {
     return this.#type;
   }
 
-  #Type = ['ADULT', 'CHILD', 'INFANT'];
+  #Type = Ticket.getTypes();
 }

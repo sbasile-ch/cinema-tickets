@@ -1,4 +1,3 @@
-import TicketTypeRequest        from './lib/TicketTypeRequest.js';
 import Order                    from './lib/Order.js';
 import InvalidPurchaseException from './lib/InvalidPurchaseException.js';
 import TicketPaymentService     from '../thirdparty/paymentgateway/TicketPaymentService.js';

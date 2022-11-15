@@ -3,7 +3,6 @@ import Utils             from './Utils.js';
 import TicketTypeRequest from './TicketTypeRequest.js';
 import PriceService      from '../../thirdparty/priceservice/PriceService.js';
 
-
 const MAX_TICKETS_PER_ORDER = 20;
 
 //_____________________________

@@ -1,5 +1,3 @@
-import TicketTypeRequest from './pairtest/lib/TicketTypeRequest.js';
-import Ticket            from './pairtest/lib/Ticket.js';
 import Utils             from './pairtest/lib/Utils.js';
 import TicketService     from './pairtest/TicketService.js';
 import * as readline     from 'node:readline/promises';
